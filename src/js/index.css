@@ -1,0 +1,14 @@
+body {
+  background: var(--white);
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+input, textarea {
+  background: var(--white);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+:root {
+  --first: #FF5252;
+  --first-weak: rgba(255, 82, 82, 0.5);
+  --white: #f2f2f2;
+}
