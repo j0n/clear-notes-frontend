@@ -7,6 +7,7 @@
               "cwd": "babelrc",
               "alias": {
                   "Components": "./src/js/Components/",
+                  "Screens": "./src/js/Screens/",
               }
           }
       ]
