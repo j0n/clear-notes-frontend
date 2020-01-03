@@ -8,6 +8,8 @@
               "alias": {
                   "Components": "./src/js/Components/",
                   "Screens": "./src/js/Screens/",
+                  "Store": "./src/js/store.js",
+                  "Actions": "./src/js/Actions/",
               }
           }
       ]
