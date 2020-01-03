@@ -2,7 +2,9 @@ import React, {createContext, useReducer} from 'react';
 import Load from './Middlewares/Load';
 const initialState = {
   id: 'yo',
-  content: ''
+  token: localStorage.getItem('note-token') || false,
+  content: '',
+  loading: false,
 };
 const store = createContext(initialState);
 const { Provider } = store;
@@ -16,6 +18,27 @@ const compose = (...fns) => {
 const StateProvider = ( { children } ) => {
   const [mainState, dispatch] = useReducer((state, action) => {
     switch(action.type) {
+      case 'PENDING':
+        return {
+          ...state,
+          loading: true
+        }
+      case 'PENDING_DONE':
+        return {
+          ...state,
+          loading: false
+        }
+      case 'LOGOUT':
+        return {
+          ...state,
+          token: false
+        }
+      case 'LOGIN':
+        const { token } = action;
+        return {
+          ...state,
+          token
+        }
       case 'UPDATE_VALUE':
         const { type, name, value } = action;
         const { links = {} } = state;
@@ -23,16 +46,12 @@ const StateProvider = ( { children } ) => {
           ...state,
           [name]: value
         }
-      case 'action':
-        const newState = {yo:'a'}
-        return newState;
       case 'LOADED_CONTENT':
         const { id, content } = action;
         const { id: currentId } = state;
         if (id !== currentId) {
           return state;
         }
-        console.log(state);
         return {
           ...state,
           content

@@ -8,22 +8,19 @@ import FileUpload from 'Components/FileUpload'
 import Link from 'Components/Link'
 import Button from 'Components/Button'
 import Note from 'Screens/Note'
-
-const { API_URL } = process.env;
+import Login from 'Screens/Login'
+import List from 'Screens/List'
+import LoadingIndicator from 'Components/LoadingIndicator';
 
 export default function App() {
-  const { mainState } = useContext(store);
-  const { id =  'none.txt', content = '' } = mainState;
   return (
     <div>
+      <LoadingIndicator />
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Note />
-          </Route>
-          <Route exact path="/list">
-            <h1>List</h1>
-          </Route>
+          <Route exact path="/n/:id" component={Note} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={List} />
         </Switch>
       </Router>
     </div>

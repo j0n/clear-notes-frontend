@@ -16,7 +16,8 @@ export default function Links (props) {
   }
   var classes = classNames({
     [styles.wrapper]: true,
-    [styles.header]: type === 'header'
+    [styles.header]: type === 'header',
+    [props.className]: true,
   });
   return (
     <div className={classes}>

@@ -12,7 +12,6 @@
   min-height: 300px;
   font-size: 1.1rem;
   line-height: 1.6rem;
-  border-bottom: 1px solid #DDD;
   color: #363636;
 }
 .textarea:focus {

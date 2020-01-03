@@ -1,0 +1,48 @@
+.files {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+@media screen and (max-width: 500px) {
+  .files {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.files a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+}
+.create {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: #fff;
+  padding: 20px 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 1px var(--shadow);
+}
+.create input {
+  background: white;
+  width: 70%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  height: 40px;
+}
+.create button {
+  background: var(--first);
+  font-size: 0.8rem;
+  border: none;
+  height: 40px;
+  color: white;
+  border-radius: 20px;
+  width: 25%;
+  text-transform: uppercase;
+}
+
