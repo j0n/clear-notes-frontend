@@ -17,7 +17,7 @@ export default function Note (props) {
     }
   }, []);
   return (
-    <div>
+    <div className={styles.note}>
       <Link
         type="header"
         name="id"

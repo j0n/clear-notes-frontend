@@ -1,7 +1,7 @@
 .textarea {
   box-sizing: border-box;
   border: none;
-  background: #F2F2F2;
+  background: var(--white);
   border-radius: 5px;
   margin: 0px 0px;
   padding: 10px;

@@ -10,7 +10,7 @@ input, textarea {
 :root {
   --first: #FF5252;
   --first-weak: rgba(255, 82, 82, 0.5);
-  --white: #f2f2f2;
+  --white: #fafafa;
   --shadow: #e0e0e0;
   --gray: #ababab;
   --black: #363636;
