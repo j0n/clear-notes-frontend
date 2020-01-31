@@ -5,7 +5,7 @@ console.log('Loading dev config for webpack');
 
 module.exports = merge(common, {
   output: {
-    path: '/Users/jonandersson/dev/hearsay.se/static',
+    path: '/dist',
     filename: '[hash].app.bundle.js',
     publicPath: '/',
   },

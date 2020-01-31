@@ -30,13 +30,7 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: [
-          'babel-loader',
-        ],
-      },
+      { test: /\.(t|j)sx?$/, use: { loader: 'ts-loader' }, exclude: /node_modules/ },
       {
         test: /\.css$/,
         use: [
@@ -58,7 +52,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts'],
   },
   // Dev server configuration -> ADDED IN THIS STEP
   // Now it uses our "src" folder as a starting point

@@ -5,9 +5,7 @@ const common = require('./webpack.config.js');
 
 module.exports = merge(common, {
   output: {
-    path: '/Users/jonandersson/dev/hearsay.se/static',
     filename: 'app.bundle.js',
-    publicPath: '/',
   },
   plugins: [
     new Dotenv({
