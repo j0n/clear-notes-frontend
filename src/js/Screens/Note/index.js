@@ -18,6 +18,7 @@ export default function Note (props) {
   }, []);
   return (
     <div className={styles.note}>
+      <a className={styles.backButton} href="/">&#9664;</a>
       <Link
         type="header"
         name="id"

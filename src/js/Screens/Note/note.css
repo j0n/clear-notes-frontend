@@ -1,12 +1,24 @@
 .note {
-  max-width: 1000px;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 30px;
+  padding: 0;
   margin: 0 auto;
 }
 .top {
   position: fixed;
   top: 0;
   width: 100%;
+}
+.backButton {
+  z-index: 100;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--black);
+  position: fixed;
+  top: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  left: 0;
 }

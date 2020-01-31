@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import Link from 'Components/Link'
 
 import { store } from '../../store.js';
+import styles from './login.css';
+import Button from 'Components/Button';
 
 const { API_URL } = process.env;
 
@@ -30,10 +32,7 @@ export default function Login (props) {
         return;
       }
       const { token } = await response.json();
-      dispatch({
-        type: 'LOGIN',
-        token
-      })
+      dispatch({ type: 'LOGIN', token })
       props.history.push("/");
     } catch (err) {
       alert('Error');
@@ -42,12 +41,27 @@ export default function Login (props) {
   }
   const { email = '', password = '' } = state;
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <input value={email} type="email" onChange={onEmailChange} />
-        <input value={password} type="password" onChange={onPasswordChange} />
-        <button type="submit">Login</button>
-      </form>
+    <div className={styles.wrapper}>
+      <div>
+        <h1>Clear notes</h1>
+        <form onSubmit={onSubmit}>
+          <input
+            className={styles.input}
+            value={email}
+            type="Email"
+            placeholder="email"
+            onChange={onEmailChange}
+          />
+          <input
+            className={styles.input}
+            value={password}
+            type="password"
+            placeholder="Password"
+            onChange={onPasswordChange}
+          />
+          <Button type="submit">Login</Button>
+        </form>
+      </div>
     </div>
   );
 }
