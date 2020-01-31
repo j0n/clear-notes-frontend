@@ -1,6 +1,4 @@
 # Clear notes frontend
-A small react app to use as UI for your clear notes.
-
 Make sure you have setup <a href="https://github.com/j0n/clear-notes">Clear notes server</a>
 
 ## Setup and install dependencies
