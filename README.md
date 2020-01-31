@@ -1,25 +1,32 @@
 # Clear notes frontend
-Make sure you have setup <a href="https://github.com/j0n/clear-notes">Clear notes server</a>
-# Setup
+A small react app to use as UI for your clear notes.
 
+Make sure you have setup <a href="https://github.com/j0n/clear-notes">Clear notes server</a>
+
+## Setup and install dependencies
 `git clone git@github.com:j0n/clear-notes-frontend.git`
 
-## install dependencies
 `cd clear-notes-frontend`
+
+
 `npm i`
 
-## Add Url to server
+### Set url to clear notes server
 Add .env and add `API_URL` as parameter
-`cp env.sample .env`
-`echo "URL_TO_URL_CLEAR_NOTES_SERVER" > .env`
+
+* `cp env.sample .env`
+
+* `echo "URL_TO_URL_CLEAR_NOTES_SERVER" > .env`
+
 
 ## Start dev server
 `npm run dev`
 
 ## Build for deploy
 Add .env.prod and add URL to you prod server`API_URL` as parameter
-`cp env.sample .env.prod`
-`echo "URL_TO_URL_CLEAR_NOTES_SERVER" > .env.prod`
+
+* `cp env.sample .env.prod`
+* `echo "URL_TO_URL_CLEAR_NOTES_SERVER" > .env.prod`
 
 Then run `npm bun build`, the frontend code is output to `/dist` copy
 to your static folder in your prefered react serving server
@@ -27,4 +34,8 @@ to your static folder in your prefered react serving server
 
 
 
+# TODO
+* Start support markdown instead of pure textarea.
+* Migrate to typescript
+* Style, style :)
 
